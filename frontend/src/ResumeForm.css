@@ -1,0 +1,164 @@
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.resume-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ================= LEFT SIDE (FORM) ================= */
+.form-section {
+  width: 35%;
+  min-width: 320px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+/* Form Inputs */
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-section textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.form-section h2 {
+  margin-bottom: 15px;
+}
+
+.form-section h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+/* Button */
+.download-btn {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.download-btn:hover {
+  background-color: #1e40af;
+}
+
+/* ================= RIGHT SIDE (PREVIEW) ================= */
+.preview-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* A4 SIZE */
+.preview-section {
+  width: 794px;           /* A4 width */
+  min-height: 1123px;     /* A4 height */
+  background: #ffffff;
+  padding: 60px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Header */
+.preview-section h2 {
+  margin: 0 0 4px 0;
+  font-size: 28px;
+}
+
+.title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Section headings */
+.preview-section h3 {
+  margin-top: 22px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 4px;
+}
+
+/* Row alignment (Role | Date) */
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+/* Lists */
+.preview-section ul {
+  margin-top: 6px;
+  padding-left: 20px;
+}
+
+.preview-section li {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+/* Links */
+.preview-section a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE (Mobile) ================= */
+@media (max-width: 1100px) {
+  .resume-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+
+  .preview-section {
+    width: 100%;
+    max-width: 794px;
+  }
+}
+
+/* ================= PRINT CLEAN ================= */
+@media print {
+  body {
+    background: white;
+  }
+
+  .preview-section {
+    box-shadow: none;
+  }
+}
